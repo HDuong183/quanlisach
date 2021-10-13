@@ -1,6 +1,3 @@
-
-
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -284,4 +281,65 @@ public class frmSach extends JFrame implements ActionListener,MouseListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	/*private boolean validData(){
+		String maSach = txtMaSach.getText().trim();
+		String tuaSach = txtTuaSach.getText().trim();
+		String tacGia = txtTacGia.getText().trim();
+		String nam = txtNamXB.getText().trim();
+		String gia = txtDonGia.getText().trim();
+		String isbn = txtISBN.getText().trim();
+		String soTrang = txtSoTrang.getText().trim();
+		if (!(maSach.length() > 0 && tuaSach.matches("[A-Z]\\d{3}"))) {
+			showMessage("Error: Ma sach theo mau: [A-Z]\\\\d{3}", txtMaSach);
+			JOptionPane.showMessageDialog(this, "Error: Ma sach theo mau: [A-Z]\\\\\\\\d{3};");
+			return false;
+		}
+		if (!(tuaSach.length() > 0 && tuaSach.matches("[a-zA-Z]+"))) {
+			showMessage("Error: Tua sach theo mau: [a-zA-Z]+", txtTuaSach);
+			return false;
+			
+		}
+		if(!(tacGia.length() > 0 && tacGia.matches("[a-zA-Z']+"))) {
+			showMessage("Error: tac gia theo mau:[a-zA-Z']+ ", txtTacGia);
+			return false;
+			
+		}
+		if (nam.length() > 0) {
+			try {
+				int x = Integer.parseInt(nam);
+				int namHienTai = Calendar.getInstance().get(Calendar.YEAR);
+				if(!(x>=1900 && x < namHienTai)) {
+					showMessage("Error: nam xuat ban >= 1900 && <=" + namHienTai, txtNamXB);
+					JOptionPane.showMessageDialog(this,"Error: nam xuat ban >= 1900 && <=" + namHienTai);
+					return false;
+				}
+			}catch(NumberFormatException ex){
+				showMessage("Error: Nam xuat ban phai nhap so", txtNamXB);
+				return false;
+			}
+			
+		}
+		if(gia.length() > 0)
+		{
+			try {
+				double y = Double.parseDouble(gia);
+				if(y<0) {
+					showMessage("Error: don gia phai > 0", txtDonGia);
+					return false;
+				}
+			}catch(NumberFormatException ex){
+				showMessage("Error: Don gia phai nhap so", txtDonGia);
+				return false;
+			}
+			
+		}
+		if(isbn.length() > 0)
+			if(!isbn.matches("\\d+(-\\d+{3,4}")) {
+				showMessage("Error: ISBN co mau dang X-X-X-X", txtISBN);
+				return false;
+			}
+		return true;
+	}
+*/
 }
